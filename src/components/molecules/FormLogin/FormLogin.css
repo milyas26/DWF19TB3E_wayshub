@@ -1,0 +1,16 @@
+.container {
+  background-color: #161616;
+  width: 450px;
+  border-radius: 10px;
+  padding: 40px 33px;
+  box-sizing: border-box;
+}
+
+.container .title {
+  font-family: "Montserrat";
+  color: #fff;
+  text-align: start;
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 30px;
+}
