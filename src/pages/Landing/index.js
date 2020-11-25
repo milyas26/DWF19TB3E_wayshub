@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Landing.css'
+// import './Landing.css'
 import Greeting from '../../assets/images/greeting.png'
 import Gap from '../../components/atoms/Gap'
 import Button from '../../components/atoms/Button'
@@ -12,6 +12,11 @@ function Landing() {
   const handleClick = () => {
     setIsRegistered((isRegistered = !isRegistered))
   }
+
+  const Registered = () => {
+    setIsRegistered((isRegistered = true))
+  }
+
   return (
     <div className="page">
       <div className="left">
@@ -26,7 +31,11 @@ function Landing() {
         </div>
       </div>
       <div className="right">
-        {isRegistered ? <FormLogin /> : <FormRegister />}
+        {isRegistered ? (
+          <FormLogin />
+        ) : (
+          <FormRegister registered={Registered} />
+        )}
       </div>
     </div>
   )

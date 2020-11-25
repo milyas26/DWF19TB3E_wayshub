@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  margin-bottom: 46px;
+  justify-content: space-between;
+  padding: 0;
+  padding: 47px 56px 47px 356px;
+  background-color: #000;
+}
+
+.header .search {
+  flex: 3;
+  margin-right: 150px;
+}
+
+.header .user {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.header .user .userImage {
+  height: 44px;
+  width: 38px;
+}

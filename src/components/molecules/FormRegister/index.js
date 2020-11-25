@@ -5,9 +5,9 @@ import Button from '../../atoms/Button'
 import './FormRegister.css'
 import TextArea from '../../atoms/TextArea'
 
-const FormRegister = () => {
+const FormRegister = (props) => {
   return (
-    <div className="container">
+    <div className="register">
       <h1 className="title">Sign Up</h1>
       <Input placeholder="Email" />
       <Gap height={20} />
@@ -17,7 +17,7 @@ const FormRegister = () => {
       <Gap height={20} />
       <TextArea placeholder="Description Channel" />
       <Gap height={40} />
-      <Button title="Sign Up" />
+      <Button title="Sign Up" onClick={props.registered} />
     </div>
   )
 }

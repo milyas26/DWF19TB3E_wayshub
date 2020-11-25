@@ -1,4 +1,4 @@
-.container {
+.login {
   background-color: #161616;
   width: 450px;
   border-radius: 10px;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.container .title {
+.login .title {
   font-family: "Montserrat";
   color: #fff;
   text-align: start;
