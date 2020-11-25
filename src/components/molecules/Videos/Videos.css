@@ -1,3 +1,10 @@
+.videos .thumbnail .thumbnail-wrapper {
+  width: 25%;
+}
+
+.videos .thumbnail.recomendation .thumbnail-wrapper {
+  width: 100%;
+}
 .videos h2 {
   color: #fff;
   font-weight: 24px;

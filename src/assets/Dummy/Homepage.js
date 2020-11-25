@@ -9,7 +9,7 @@ import Thumbnail8 from '../images/thumbnail8.png'
 
 const homeVideo = [
   {
-    id: '1',
+    _id: '1',
     title: 'GIMANS KABS NYA NICH? #qgbacotsantuy',
     channel: 'qorygore',
     image: Thumbnail1,
@@ -17,7 +17,7 @@ const homeVideo = [
     date: '26 Sept 2020',
   },
   {
-    id: '2',
+    _id: '2',
     title: 'MALIH, PESAN PEDAS TUK ADE LONDOK - Deddy Corbuzier',
     channel: 'Deddy Corbuzier',
     image: Thumbnail2,
@@ -25,7 +25,7 @@ const homeVideo = [
     date: '26 Sept 2020',
   },
   {
-    id: '3',
+    _id: '3',
     title: 'Keraton Yogyakarta : Ibu  Ratu & Tari Bedhaya',
     channel: 'Kisah Tanah Jawa',
     image: Thumbnail3,
@@ -33,7 +33,7 @@ const homeVideo = [
     date: '26 Sept 2020',
   },
   {
-    id: '4',
+    _id: '4',
     title: 'BBQ Montain Boys Episode 5 : A Day in The Life of Farmer',
     channel: 'BBQ Montain Boys',
     image: Thumbnail4,
@@ -41,7 +41,7 @@ const homeVideo = [
     date: '26 Sept 2020',
   },
   {
-    id: '5',
+    _id: '5',
     title: 'Dikirimkan satu paket gede dari realme buat kita bongkat !',
     channel: 'Gatgetin',
     image: Thumbnail5,
@@ -49,7 +49,7 @@ const homeVideo = [
     date: '26 Sept 2020',
   },
   {
-    id: '6',
+    _id: '6',
     title: 'Awas! Kebiasaan Buruk ini bisa Bikin laptop Jadi cepat Rusak',
     channel: 'paradise Store Indonesia',
     image: Thumbnail6,
@@ -57,7 +57,7 @@ const homeVideo = [
     date: '26 Sept 2020',
   },
   {
-    id: '7',
+    _id: '7',
     title: 'GIMANS KABS NYA NICH? #qgbacotsantuy',
     channel: 'Gita Suara Music',
     image: Thumbnail7,
@@ -65,7 +65,7 @@ const homeVideo = [
     date: '26 Sept 2020',
   },
   {
-    id: '8',
+    _id: '8',
     title: 'Ardhito Pramono ft. Aurelie Moeremans - I Just Couldn’t Sa ...',
     channel: 'Ardhito Pramono',
     image: Thumbnail8,
@@ -73,7 +73,7 @@ const homeVideo = [
     date: '26 Sept 2020',
   },
   {
-    id: '9',
+    _id: '9',
     title: 'Ardhito Pramono ft. Aurelie Moeremans - I Just Couldn’t Sa ...',
     channel: 'Ardhito Pramono',
     image: Thumbnail3,
@@ -81,7 +81,7 @@ const homeVideo = [
     date: '26 Sept 2020',
   },
   {
-    id: '10',
+    _id: '10',
     title: 'Ardhito Pramono ft. Aurelie Moeremans - I Just Couldn’t Sa ...',
     channel: 'Ardhito Pramono',
     image: Thumbnail5,
@@ -89,7 +89,7 @@ const homeVideo = [
     date: '26 Sept 2020',
   },
   {
-    id: '11',
+    _id: '11',
     title: 'Ardhito Pramono ft. Aurelie Moeremans - I Just Couldn’t Sa ...',
     channel: 'Ardhito Pramono',
     image: Thumbnail8,
@@ -97,7 +97,7 @@ const homeVideo = [
     date: '26 Sept 2020',
   },
   {
-    id: '12',
+    _id: '12',
     title: 'Ardhito Pramono ft. Aurelie Moeremans - I Just Couldn’t Sa ...',
     channel: 'Ardhito Pramono',
     image: Thumbnail5,

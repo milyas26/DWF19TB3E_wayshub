@@ -4,8 +4,9 @@ import DummySubscribed from '../../../assets/Dummy/Subscribed'
 import Thumbnail from '../../molecules/Thumbnail'
 import './Videos.css'
 
-const Videos = ({ state }) => {
-  console.log(state)
+const Videos = ({ state, isRecomendation }) => {
+  const className = []
+  if (isRecomendation) className.push('recomendation')
   if (state === 'Subscribed') {
     return (
       <div className="videos">
@@ -13,6 +14,7 @@ const Videos = ({ state }) => {
         <div className="thumbnail">
           {DummySubscribed.map((item) => (
             <div className="thumbnail-wrapper">
+              {console.log(item)}
               <Thumbnail
                 key={item.id}
                 img={item.image}
@@ -29,8 +31,8 @@ const Videos = ({ state }) => {
   }
   return (
     <div className="videos">
-      <h2>FOR YOUR PAGE</h2>
-      <div className="thumbnail">
+      {!isRecomendation ? <h2>FOR YOUR PAGE</h2> : null}
+      <div className={['thumbnail', className].join(' ')}>
         {DummyHompage.map((item) => (
           <div className="thumbnail-wrapper">
             <Thumbnail

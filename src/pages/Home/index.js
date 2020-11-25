@@ -12,10 +12,10 @@ import SidebarMenu from '../../components/atoms/SidebarMenu'
 import Channels from '../../assets/Dummy/Channel'
 import Channel from '../../components/atoms/Channel'
 import { Link } from 'react-router-dom'
+import DetailVideo from '../../components/molecules/DetailVideo'
 
 const Home = () => {
   let [Menu, setMenu] = useState('Home')
-  console.log(Menu)
   const home = () => {
     setMenu((Menu = 'Home'))
   }
@@ -57,7 +57,8 @@ const Home = () => {
 
       <div className="right">
         <Header />
-        <Videos state={Menu} />
+        {/* <Videos state={Menu} /> */}
+        <DetailVideo />
       </div>
     </div>
   )
