@@ -13,6 +13,7 @@ import Channels from '../../assets/Dummy/Channel'
 import Channel from '../../components/atoms/Channel'
 import { Link } from 'react-router-dom'
 import DetailVideo from '../../components/molecules/DetailVideo'
+import MyChannel from '../../components/molecules/MyChannel'
 
 const Home = () => {
   let [Menu, setMenu] = useState('Home')
@@ -58,7 +59,8 @@ const Home = () => {
       <div className="right">
         <Header />
         {/* <Videos state={Menu} /> */}
-        <DetailVideo />
+        {/* <DetailVideo /> */}
+        <MyChannel />
       </div>
     </div>
   )
