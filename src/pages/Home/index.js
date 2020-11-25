@@ -1,39 +1,63 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../../components/molecules/Header'
 import Videos from '../../components/molecules/Videos'
-
 import brandIcon from '../../assets/icons/brandIcon.svg'
-import homeIcon from '../../assets/icons/home_orange.svg'
-import subscriptionIcon from '../../assets/icons/subscription_white.svg'
+import homeIconActive from '../../assets/icons/home_orange.svg'
+import homeInActive from '../../assets/icons/home_white.svg'
+import subscriptionIconInActive from '../../assets/icons/subscription_white.svg'
+import subscriptionIconActive from '../../assets/icons/subscription_orange.svg'
 import SidebarMenu from '../../components/atoms/SidebarMenu'
 
 // Channel Images
-import User1 from '../../assets/images/user1.png'
-import User2 from '../../assets/images/user2.png'
-import User3 from '../../assets/images/user3.png'
-import User4 from '../../assets/images/user4.png'
+import Channels from '../../assets/Dummy/Channel'
 import Channel from '../../components/atoms/Channel'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
+  let [Menu, setMenu] = useState('Home')
+  console.log(Menu)
+  const home = () => {
+    setMenu((Menu = 'Home'))
+  }
+  const subscribed = () => {
+    setMenu((Menu = 'Subscribed'))
+  }
   return (
     <div className="home">
       <div className="sidebar">
         <div className="sidebar-wrapper ">
-          <img className="icon" src={brandIcon} alt="Brand Icon" />
-          <SidebarMenu icon={homeIcon} label="Home" isActive />
-          <SidebarMenu icon={subscriptionIcon} label="Subscription" />
+          <Link>
+            <img className="icon" src={brandIcon} alt="Brand Icon" />
+          </Link>
+          <SidebarMenu
+            icon={Menu === 'Home' ? homeIconActive : homeInActive}
+            isActive={Menu === 'Home' ? true : false}
+            label="Home"
+            onClick={home}
+          />
+          <SidebarMenu
+            icon={
+              Menu === 'Subscribed'
+                ? subscriptionIconActive
+                : subscriptionIconInActive
+            }
+            isActive={Menu === 'Subscribed' ? true : false}
+            label="Subscription"
+            onClick={subscribed}
+          />
           <h3>Channel</h3>
-          <Channel image={User1} label="Sab" />
-          <Channel image={User2} label="BBQ Mountain" />
-          <Channel image={User3} label="Egi Jos" />
-          <Channel image={User4} label="Tahu Koding" />
-          <h4 className="show-more">Show More</h4>
+          {Channels.map((item) => (
+            <Channel key={item.id} image={item.image} label={item.label} />
+          ))}
+          <Link className="show-more-link" href="/show-more">
+            <h4 className="show-more">Show More</h4>
+          </Link>
         </div>
       </div>
 
       <div className="right">
         <Header />
-        <Videos />
+        <Videos state={Menu} />
       </div>
     </div>
   )

@@ -26,3 +26,10 @@
   font-size: 12px;
   color: #555555;
 }
+
+.link-thumbnail:hover {
+  text-decoration: none;
+}
+.link-channel:hover {
+  text-decoration: none;
+}

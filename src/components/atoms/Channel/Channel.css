@@ -16,3 +16,7 @@
   font-weight: 400;
   margin-bottom: 0;
 }
+
+.channel-link:hover {
+  text-decoration: none;
+}

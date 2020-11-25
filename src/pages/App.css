@@ -71,6 +71,10 @@ body {
   margin-top: 47px;
 }
 
+.show-more-link:hover {
+  text-decoration: none;
+}
+
 .home .right {
   flex: 1;
   padding: 46px 57px;

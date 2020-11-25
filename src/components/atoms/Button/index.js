@@ -7,7 +7,7 @@ const Button = ({ title, isSmall, onClick, type, icon }) => {
   if (isSmall) className.push('btn-sm')
   if (type === 'add') {
     return (
-      <Link>
+      <Link className="button-link">
         <div className="btn-add">
           <img src={icon} alt="icon" />
           <p className="add" onClick={onClick}>
