@@ -9,6 +9,7 @@ import MyChannelPage from './MyChannelPage'
 import DetailVideoPage from './DetailVideoPage'
 import ContentCreatorPage from './ContentCreatorPage'
 import AddVideo from './AddVideoPage'
+import EditChannel from './EditChannel'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/detail-video" component={DetailVideoPage} />
           <Route path="/content-creator" component={ContentCreatorPage} />
           <Route path="/add-video" component={AddVideo} />
+          <Route path="/edit-channel" component={EditChannel} />
         </Switch>
       </Router>
     </div>
