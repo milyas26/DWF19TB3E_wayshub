@@ -9,13 +9,9 @@ const Thumbnail = ({ img, title, channel, views, date, to }) => {
   return (
     <div className="thumbnail">
       <Card style={{ width: 227, backgroundColor: '#000' }}>
-        <Link className="link-thumbnail">
-          <Card.Img variant="top" src={img} />
-          <h6 className="title">{title}</h6>
-        </Link>
-        <Link className="link-channel">
-          <p className="channel">{channel}</p>
-        </Link>
+        <Card.Img variant="top" src={img} />
+        <h6 className="title">{title}</h6>
+        <p className="channel">{channel}</p>
         <div className="description">
           <div className="views">
             <img src={viewIcon} alt="views" />

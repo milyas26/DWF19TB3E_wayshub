@@ -34,58 +34,8 @@ body {
 /* End Landing Page */
 
 /* Home Page  */
-.home {
-  display: flex;
+.home .container-page {
+  padding-right: 50px;
+  margin-left: 360px;
 }
-.home .sidebar {
-  max-width: 300px;
-  position: fixed;
-  float: left;
-  z-index: 9999;
-}
-
-.home .sidebar-wrapper {
-  padding: 50px;
-  box-sizing: border-box;
-  background-color: #151515;
-  max-width: 100%;
-}
-.home .sidebar-wrapper .icon {
-  width: 126px;
-  margin-bottom: 40px;
-}
-
-.home .sidebar-wrapper h3 {
-  color: #ff7a00;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 34px;
-}
-
-.home .sidebar-wrapper .show-more {
-  display: block;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-  color: #fff;
-  margin-top: 47px;
-}
-
-.show-more-link:hover {
-  text-decoration: none;
-}
-
-.home .right {
-  flex: 1;
-  padding: 46px 57px;
-  margin-left: 300px;
-  margin-top: 92px;
-}
-
-.home .right .thumbnail {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 /* End Home Page */

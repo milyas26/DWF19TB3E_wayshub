@@ -4,10 +4,10 @@ import DummySubscribed from '../../../assets/Dummy/Subscribed'
 import Thumbnail from '../../molecules/Thumbnail'
 import './Videos.css'
 
-const Videos = ({ state, isRecomendation }) => {
+const Videos = ({ state, isRecomendation, isSubscribed }) => {
   const className = []
   if (isRecomendation) className.push('recomendation')
-  if (state === 'Subscribed') {
+  if (isSubscribed) {
     return (
       <div className="videos">
         <h2>SUBSCRIBED</h2>

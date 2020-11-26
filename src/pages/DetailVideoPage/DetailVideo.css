@@ -13,12 +13,12 @@
 
 .detail-video .recomendation {
   max-width: 230px;
+  margin-top: 45px;
 }
 
 .detail-video .recomendation h4 {
   color: #fff;
   font-weight: 24px;
-  margin-bottom: 20px;
   border-bottom: 2px solid #d2d2d2;
   padding-bottom: 5px;
 }

@@ -1,0 +1,35 @@
+.profile {
+  margin-top: 26px;
+}
+
+.profile .user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile .user-profile img {
+  height: 90px;
+  width: 80px;
+  margin-right: 23px;
+}
+
+.profile .user-profile .channel-name h6 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.profile .user-profile .channel-name p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #f0f0f0;
+}
+
+.profile .user-profile .button-wrapper {
+  flex: 1;
+  text-align: end;
+}
+
+.profile .user-profile .button-wrapper .add-button {
+  font-size: 12px;
+}
