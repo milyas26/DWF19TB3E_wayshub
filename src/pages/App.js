@@ -1,7 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import MainComponent from '../components/molecules/MainComponent'
+import { AppContextProvider } from '../context/appContext'
+import PrivateRoute from '../components/Routes/privateRoute'
 import HomePage from './Homepage'
 import Landing from './Landing'
 import SubscribedPage from './SubscribtionPage'
@@ -14,19 +15,24 @@ import EditChannel from './EditChannel'
 function App() {
   return (
     <div className="App">
-      <Router>
-        <MainComponent />
-        <Switch>
-          <Route exact path="/" component={Landing} />
-          <Route path="/home" component={HomePage} />
-          <Route path="/subscribed" component={SubscribedPage} />
-          <Route path="/my-channel" component={MyChannelPage} />
-          <Route path="/detail-video" component={DetailVideoPage} />
-          <Route path="/content-creator" component={ContentCreatorPage} />
-          <Route path="/add-video" component={AddVideo} />
-          <Route path="/edit-channel" component={EditChannel} />
-        </Switch>
-      </Router>
+      <AppContextProvider>
+        <Router>
+          <Switch>
+            <Route exact path="/login" component={Landing} />
+            <Route exact path="/" component={HomePage} />
+            <PrivateRoute exact path="/subscribed" component={SubscribedPage} />
+            <PrivateRoute exact path="/my-channel" component={MyChannelPage} />
+            <Route exact path="/detail-video/:id" component={DetailVideoPage} />
+            <Route
+              exact
+              path="/content-creator"
+              component={ContentCreatorPage}
+            />
+            <PrivateRoute exact path="/add-video" component={AddVideo} />
+            <PrivateRoute exact path="/edit-channel" component={EditChannel} />
+          </Switch>
+        </Router>
+      </AppContextProvider>
     </div>
   )
 }

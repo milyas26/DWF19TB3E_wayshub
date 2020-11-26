@@ -1,10 +1,9 @@
-import React from 'react'
 import DummyHompage from '../../../assets/Dummy/Homepage'
 import DummySubscribed from '../../../assets/Dummy/Subscribed'
 import Thumbnail from '../../molecules/Thumbnail'
 import './Videos.css'
 
-const Videos = ({ state, isRecomendation, isSubscribed }) => {
+const Videos = ({ isRecomendation, isSubscribed }) => {
   const className = []
   if (isRecomendation) className.push('recomendation')
   if (isSubscribed) {
@@ -14,9 +13,9 @@ const Videos = ({ state, isRecomendation, isSubscribed }) => {
         <div className="thumbnail">
           {DummySubscribed.map((item) => (
             <div className="thumbnail-wrapper">
-              {console.log(item)}
               <Thumbnail
-                key={item.id}
+                key={item._id}
+                id={item._id}
                 img={item.image}
                 title={item.title}
                 channel={item.channel}
@@ -36,7 +35,8 @@ const Videos = ({ state, isRecomendation, isSubscribed }) => {
         {DummyHompage.map((item) => (
           <div className="thumbnail-wrapper">
             <Thumbnail
-              key={item.id}
+              key={item._id}
+              id={item._id}
               img={item.image}
               title={item.title}
               channel={item.channel}

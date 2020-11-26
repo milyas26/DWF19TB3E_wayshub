@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import BackgroundImage from '../../assets/images/background-youtube.png'
+import MainComponent from '../../components/molecules/MainComponent'
 
 import MyVideos from '../../components/molecules/MyVideos'
 import MyDescription from '../../components/molecules/MyVideos/Description'
@@ -18,13 +19,14 @@ const MyChannel = () => {
 
   return (
     <div className="home">
+      <MainComponent />
       <div className="container-page">
         <div className="channel-wrapper">
           <div className="image-wrapper">
             <img src={BackgroundImage} alt="" />
           </div>
 
-          <Profile title="Edit Channel" />
+          <Profile to="/edit-channel" title="Edit Channel" />
 
           <div className="link-profile-wrapper">
             <Link className="link-profile" onClick={handleVideo}>

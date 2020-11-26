@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import BackgroundImage from '../../assets/images/background-youtube.png'
+import MainComponent from '../../components/molecules/MainComponent'
 
 import MyVideos from '../../components/molecules/MyVideos'
 import Profile from '../../components/molecules/Profile'
@@ -9,6 +10,7 @@ const ContentCreator = () => {
   let [isSubscribed, setIsSubscribed] = useState(true)
   return (
     <div className="home">
+      <MainComponent />
       <div className="container-page">
         <div className="content-creator">
           <div className="image-wrapper">

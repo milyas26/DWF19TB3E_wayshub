@@ -5,13 +5,17 @@ import dateIcon from '../../../assets/icons/refresh.svg'
 import './Thumbnail.css'
 import { Link } from 'react-router-dom'
 
-const Thumbnail = ({ img, title, channel, views, date, to }) => {
+const Thumbnail = ({ id, img, title, channel, views, date }) => {
   return (
     <div className="thumbnail">
       <Card style={{ width: 227, backgroundColor: '#000' }}>
-        <Card.Img variant="top" src={img} />
-        <h6 className="title">{title}</h6>
-        <p className="channel">{channel}</p>
+        <Link to={`/detail-video/${id}`} className="link-thumbnail">
+          <Card.Img variant="top" src={img} />
+          <h6 className="title">{title}</h6>
+        </Link>
+        <Link to={`/content-creator/${id}`} className="link-thumbnail">
+          <p className="channel">{channel}</p>
+        </Link>
         <div className="description">
           <div className="views">
             <img src={viewIcon} alt="views" />

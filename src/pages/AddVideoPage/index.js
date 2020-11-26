@@ -7,12 +7,15 @@ import './AddVideo.css'
 
 import AttachIcon from '../../assets/icons/attach.svg'
 import VideoIcon from '../../assets/icons/add_video_orange.svg'
+import { Link } from 'react-router-dom'
+import MainComponent from '../../components/molecules/MainComponent'
 
 const AddVideo = () => {
   return (
     <div className="home">
+      <MainComponent isAddVideo />
       <div className="container-page">
-        <h2>Add Video</h2>
+        <h2 className="add-video">Add Video</h2>
         <div className="input-wrapper">
           <div className="input-title">
             <Input placeholder="Title" />
@@ -27,7 +30,9 @@ const AddVideo = () => {
           <InputFile height={55} label="Upload Video" icon={VideoIcon} />
         </div>
         <Gap height={45} />
-        <Button title="Upload" />
+        <Link to="/my-channel">
+          <Button title="Upload" />
+        </Link>
       </div>
     </div>
   )

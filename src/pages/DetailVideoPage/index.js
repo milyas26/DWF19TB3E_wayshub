@@ -1,4 +1,3 @@
-import React from 'react'
 import Thumbnail from '../../assets/images/thumbnail17.png'
 import User from '../../assets/images/user2.png'
 import viewIcon from '../../assets/icons/view.svg'
@@ -9,10 +8,12 @@ import './DetailVideo.css'
 import Button from '../../components/atoms/Button'
 import Comments from '../../components/atoms/Comments'
 import CommentsText from '../../assets/Dummy/Comments'
+import MainComponent from '../../components/molecules/MainComponent'
 
 const DetailVideoPage = () => {
   return (
     <div className="home">
+      <MainComponent />
       <div className="container-page">
         <div className="detail-video">
           <div className="details">

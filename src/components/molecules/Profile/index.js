@@ -1,6 +1,7 @@
 import Button from '../../atoms/Button'
 import User from '../../../assets/images/user2.png'
 import './Profile.css'
+import { Link } from 'react-router-dom'
 
 const Profile = (props) => {
   return (
@@ -12,7 +13,9 @@ const Profile = (props) => {
           <p>120K Subscriber</p>
         </div>
         <div className="button-wrapper">
-          <Button className="add-button" title={props.title} isSmall />
+          <Link to={props.to}>
+            <Button className="add-button" title={props.title} isSmall />
+          </Link>
         </div>
       </div>
     </div>

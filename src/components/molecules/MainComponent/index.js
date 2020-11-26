@@ -2,17 +2,15 @@ import Header from '../Header'
 import SideBar from '../SideBar'
 import './MainComponent.css'
 
-const MainComponent = () => {
-  const className = []
-  if (window.location.pathname == '/') className.push('hide')
+const MainComponent = ({ isHome, isSubscribed, isAddVideo }) => {
   return (
-    <div className={['main', className].join(' ')}>
+    <div className="main">
       <div className="sidebar">
-        <SideBar />
+        <SideBar isHome={isHome} isSubscribed={isSubscribed} />
       </div>
 
       <div className="right">
-        <Header />
+        <Header isAddVideo={isAddVideo} />
       </div>
     </div>
   )
