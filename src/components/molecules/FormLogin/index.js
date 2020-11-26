@@ -3,10 +3,9 @@ import Button from '../../atoms/Button'
 import Gap from '../../atoms/Gap'
 import Input from '../../atoms/Input'
 import './FormLogin.css'
-import { useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const FormLogin = () => {
-  const history = useHistory()
   return (
     <div className="login">
       <h1 className="title">Sign In</h1>
@@ -14,7 +13,9 @@ const FormLogin = () => {
       <Gap height={20} />
       <Input placeholder="Password" type="password" />
       <Gap height={40} />
-      <Button title="Sign In" onClick={() => history.push('/home')} />
+      <Link to="/home">
+        <Button title="Sign In" />
+      </Link>
     </div>
   )
 }

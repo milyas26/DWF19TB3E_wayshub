@@ -7,7 +7,7 @@ import MyDescription from '../../components/molecules/MyVideos/Description'
 import Profile from '../../components/molecules/Profile'
 import './MyChannel.css'
 
-const AddVideo = () => {
+const MyChannel = () => {
   let [isDescription, setIsDescription] = useState(false)
   const handleVideo = () => {
     setIsDescription((isDescription = !isDescription))
@@ -43,4 +43,4 @@ const AddVideo = () => {
   )
 }
 
-export default AddVideo
+export default MyChannel

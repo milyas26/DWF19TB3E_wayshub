@@ -1,10 +1,10 @@
 import React from 'react'
 import './TextArea.css'
 
-const TextArea = ({ ...rest }) => {
+const TextArea = ({ height, ...rest }) => {
   return (
     <div>
-      <textarea className="text-area" {...rest}></textarea>
+      <textarea {...rest} className="text-area" style={{ height: height }} />
     </div>
   )
 }

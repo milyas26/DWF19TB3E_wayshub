@@ -10,6 +10,7 @@
   font-size: 18px;
   font-family: "Montserrat";
   font-weight: 500;
+  overflow: hidden;
 }
 
 .input-wrapper .input:hover {
@@ -22,4 +23,21 @@
   -webkit-box-shadow: 0px 0px 3px 1px #bcbcbc;
   -moz-box-shadow: 0px 0px 3px 1px #bcbcbc;
   box-shadow: 0px 0px 1px 1px #bcbcbc;
+}
+
+.input-wrapper .input.file-input::-webkit-file-upload-button {
+  visibility: hidden;
+  padding-left: -30px;
+}
+
+.input-wrapper .input.file-input::before {
+  content: "Masukkan File";
+  border-radius: 3px;
+  padding: 5px 8px;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.input-group .custom-file .custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
 }

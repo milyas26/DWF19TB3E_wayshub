@@ -34,6 +34,10 @@
   padding: 0;
 }
 
+.btn-sm.btn-subscribed {
+  background-color: #555555;
+}
+
 .btn-add {
   display: flex;
   align-items: center;

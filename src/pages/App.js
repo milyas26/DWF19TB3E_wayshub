@@ -8,6 +8,7 @@ import SubscribedPage from './SubscribtionPage'
 import MyChannelPage from './MyChannelPage'
 import DetailVideoPage from './DetailVideoPage'
 import ContentCreatorPage from './ContentCreatorPage'
+import AddVideo from './AddVideoPage'
 
 function App() {
   return (
@@ -15,12 +16,13 @@ function App() {
       <Router>
         <MainComponent />
         <Switch>
-          <Route exact path="/" component={Landing}></Route>
-          <Route path="/home" component={HomePage}></Route>
-          <Route path="/subscribed" component={SubscribedPage}></Route>
-          <Route path="/my-channel" component={MyChannelPage}></Route>
-          <Route path="/detail-video" component={DetailVideoPage}></Route>
-          <Route path="/content-creator" component={ContentCreatorPage}></Route>
+          <Route exact path="/" component={Landing} />
+          <Route path="/home" component={HomePage} />
+          <Route path="/subscribed" component={SubscribedPage} />
+          <Route path="/my-channel" component={MyChannelPage} />
+          <Route path="/detail-video" component={DetailVideoPage} />
+          <Route path="/content-creator" component={ContentCreatorPage} />
+          <Route path="/add-video" component={AddVideo} />
         </Switch>
       </Router>
     </div>
