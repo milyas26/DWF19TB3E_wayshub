@@ -8,7 +8,8 @@ import Button from '../../atoms/Button'
 import { Link } from 'react-router-dom'
 import { Dropdown } from 'react-bootstrap'
 import UserIcon from '../../../assets/icons/user_white.svg'
-import LogoutIcon from '../../../assets/icons/logout_white.svg'
+import LoginIcon from '../../../assets/icons/logout_white.svg'
+import LogoutIcon from '../../../assets/icons/logout_red.svg'
 import { useContext } from 'react'
 import { AppContext } from '../../../context/appContext'
 
@@ -44,9 +45,22 @@ const Header = ({ isAddVideo }) => {
               <img src={UserIcon} alt="my channel" />
               <span>My Channel</span>
             </Dropdown.Item>
-            <Dropdown.Item as={Link} to="/" onClick={handleLogout}>
-              <img src={LogoutIcon} alt="my channel" />
-              <span>Logout</span>
+            <Dropdown.Item
+              as={Link}
+              to={state.isLogin ? '/home' : '/'}
+              onClick={handleLogout}
+            >
+              <img
+                src={state.isLogin ? LogoutIcon : LoginIcon}
+                alt="my channel"
+              />
+              <span
+                style={{
+                  color: state.isLogin ? 'red' : '#fff',
+                }}
+              >
+                {state.isLogin ? 'Logout' : 'Login'}
+              </span>
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>

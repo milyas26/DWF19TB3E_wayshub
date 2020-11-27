@@ -21,7 +21,7 @@ const FormLogin = () => {
       <Gap height={20} />
       <Input placeholder="Password" type="password" />
       <Gap height={40} />
-      <Link to="/">
+      <Link to="/home">
         <Button title="Sign In" onClick={handleLogin} />
       </Link>
     </div>

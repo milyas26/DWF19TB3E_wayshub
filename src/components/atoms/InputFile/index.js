@@ -8,6 +8,7 @@ const InputFile = ({ label, icon, handleFile }) => {
   }
   const handleChange = (event) => {
     const fileUploaded = event.target.files[0]
+    console.log(fileUploaded)
   }
   return (
     <div className="input-file-wrapper">

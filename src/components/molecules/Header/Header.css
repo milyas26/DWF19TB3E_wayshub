@@ -63,6 +63,7 @@
 .header .user .dropdown-menu span {
   color: #fff;
   font-size: 18px;
+  font-weight: 400;
 }
 
 .header .user .dropdown-menu .dropdown-item {

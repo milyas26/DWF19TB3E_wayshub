@@ -17,7 +17,7 @@ const SideBar = ({ isHome, isSubscribed }) => {
         <img className="icon" src={brandIcon} alt="Brand Icon" />
       </Link>
       <SidebarMenu
-        to="/"
+        to="/home"
         icon={isHome ? homeIconActive : homeInActive}
         isActive={isHome ? true : false}
         label="Home"
@@ -31,7 +31,7 @@ const SideBar = ({ isHome, isSubscribed }) => {
       <h3>Channel</h3>
       {Channels.map((item) => (
         <Channel
-          to="/content-creator"
+          to={`/content-creator/${item.id}`}
           key={item.id}
           image={item.image}
           label={item.label}

@@ -5,7 +5,7 @@ import './Channel.css'
 const Channel = ({ image, label, to }) => {
   return (
     <Link to={to} className="link-channel">
-      <div className="channel">
+      <div className="channel-sidebar">
         <img src={image} alt="Channel" />
         <p>{label}</p>
       </div>

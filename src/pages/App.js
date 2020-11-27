@@ -18,14 +18,14 @@ function App() {
       <AppContextProvider>
         <Router>
           <Switch>
-            <Route exact path="/login" component={Landing} />
-            <Route exact path="/" component={HomePage} />
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/home" component={HomePage} />
             <PrivateRoute exact path="/subscribed" component={SubscribedPage} />
             <PrivateRoute exact path="/my-channel" component={MyChannelPage} />
             <Route exact path="/detail-video/:id" component={DetailVideoPage} />
             <Route
               exact
-              path="/content-creator"
+              path="/content-creator/:id"
               component={ContentCreatorPage}
             />
             <PrivateRoute exact path="/add-video" component={AddVideo} />

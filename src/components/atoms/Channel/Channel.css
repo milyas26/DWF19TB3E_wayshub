@@ -1,22 +1,30 @@
-.channel {
+.channel-sidebar {
   display: flex;
   align-items: center;
-  margin-bottom: 18px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
   cursor: pointer;
+  padding-bottom: 5px;
 }
-.channel img {
+
+.channel-sidebar:hover {
+  border-bottom: 3px solid #ff7a00;
+  position: relative;
+  z-index: 10;
+}
+.channel-sidebar img {
   width: 38px;
   height: 38px;
   margin-right: 22px;
 }
 
-.channel p {
+.channel-sidebar p {
   color: #fff;
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 0;
 }
 
-.link-channel {
+.link-channel-sidebar {
   text-decoration: none;
 }

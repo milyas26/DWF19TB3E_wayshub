@@ -1,4 +1,5 @@
-import Thumbnail from '../../assets/images/thumbnail17.png'
+import ReactPlayer from 'react-player'
+import DummyHomepage from '../../assets/Dummy/Homepage'
 import User from '../../assets/images/user2.png'
 import viewIcon from '../../assets/icons/view.svg'
 import dateIcon from '../../assets/icons/refresh.svg'
@@ -9,24 +10,36 @@ import Button from '../../components/atoms/Button'
 import Comments from '../../components/atoms/Comments'
 import CommentsText from '../../assets/Dummy/Comments'
 import MainComponent from '../../components/molecules/MainComponent'
+import { useParams } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 const DetailVideoPage = () => {
+  const [video, setVideo] = useState('')
+  let { id } = useParams()
+  console.log(id)
+  console.log(video)
+
+  useEffect(() => {
+    const videoById = DummyHomepage.find((video) => video._id == id)
+    console.log(videoById)
+    setVideo(videoById)
+  }, [])
   return (
     <div className="home">
       <MainComponent />
       <div className="container-page">
         <div className="detail-video">
           <div className="details">
-            <img src={Thumbnail} alt="" />
-            <h2>BBQ Montain Boys Episode 5 : A Day in The Life of Farmer</h2>
+            <ReactPlayer width="100%" controls url={video.URL} />
+            <h2>{video.title}</h2>
             <div className="stats">
               <div className="views">
                 <img src={viewIcon} alt="views" />
-                <span>290K</span>
+                <span>{video.views}</span>
               </div>
               <div className="dates">
                 <img src={dateIcon} alt="Date" />
-                <span>20 August 2020</span>
+                <span>{video.date}</span>
               </div>
             </div>
             <div className="comment-section">
@@ -40,7 +53,7 @@ const DetailVideoPage = () => {
                 <Button isSmall title="Post" />
               </div>
               {CommentsText.map((item) => (
-                <Comments image={item.image} text={item.text} />
+                <Comments key={item} image={item.image} text={item.text} />
               ))}
             </div>
           </div>
