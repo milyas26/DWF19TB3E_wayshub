@@ -14,10 +14,11 @@
 }
 
 .main .sidebar-wrapper {
-  padding: 50px;
+  padding: 50px 35px 50px 50px;
   box-sizing: border-box;
   background-color: #151515;
   max-width: 100%;
+  height: 100vh;
 }
 .main .sidebar-wrapper .icon {
   width: 126px;

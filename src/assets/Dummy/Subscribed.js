@@ -66,7 +66,8 @@ const Subscribed = [
   },
   {
     id: '8',
-    title: 'Ardhito Pramono ft. Aurelie Moeremans - I Just Couldn’t Sa ...',
+    title:
+      'Ardhito Pramono ft. Aurélie Moeremans - I Just Couldn’t Save You Tonight (Story of Kale - OMPS)',
     channel: 'Ardhito Pramono',
     image: Thumbnail16,
     views: '654K',

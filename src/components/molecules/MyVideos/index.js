@@ -9,8 +9,8 @@ const MyVideos = () => {
         {MyVideosDummy.map((item) => (
           <div className="thumbnail-wrapper">
             <Thumbnail
-              key={item._id}
-              id={item._id}
+              key={item.id}
+              id={item.id}
               img={item.image}
               title={item.title}
               channel={item.channel}

@@ -30,12 +30,7 @@ const SideBar = ({ isHome, isSubscribed }) => {
       />
       <h3>Channel</h3>
       {Channels.map((item) => (
-        <Channel
-          to={`/content-creator/${item.id}`}
-          key={item.id}
-          image={item.image}
-          label={item.label}
-        />
+        <Channel item={item} key={item.id} />
       ))}
       <h4 className="show-more">Show More</h4>
     </div>

@@ -6,21 +6,25 @@ import User4 from '../../assets/images/user4.png'
 const Channels = [
   {
     id: '1',
+    subscriber: '250K',
     label: 'Sab',
     image: User1,
   },
   {
     id: '2',
+    subscriber: '300K',
     label: 'BBQ Mountain',
     image: User2,
   },
   {
     id: '3',
+    subscriber: '12K',
     label: 'Egi Jos',
     image: User3,
   },
   {
     id: '4',
+    subscriber: '1,5M',
     label: 'Tahu Koding',
     image: User4,
   },

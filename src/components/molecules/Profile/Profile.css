@@ -33,3 +33,9 @@
 .profile .user-profile .button-wrapper .add-button {
   font-size: 12px;
 }
+
+.button.button-subscribed {
+  background-color: #161616;
+  border: 2px solid #bcbcbc;
+  padding: 0;
+}

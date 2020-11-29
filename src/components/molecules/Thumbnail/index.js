@@ -1,15 +1,26 @@
-import React from 'react'
 import { Card } from 'react-bootstrap'
 import viewIcon from '../../../assets/icons/view.svg'
 import dateIcon from '../../../assets/icons/refresh.svg'
 import './Thumbnail.css'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 const Thumbnail = ({ id, img, title, channel, views, date }) => {
+  const history = useHistory()
+
+  const handleClick = () => {
+    history.push(`/detail-video/${id}`)
+    window.location.reload()
+  }
+
   return (
     <div className="thumbnail">
       <Card style={{ width: 227, backgroundColor: '#000' }}>
-        <Link to={`/detail-video/${id}`} className="link-thumbnail">
+        {/* <Link to={`/detail-video/${id}`} className="link-thumbnail"> */}
+        <Link
+          onClick={handleClick}
+          to={`/detail-video/${id}`}
+          className="link-thumbnail"
+        >
           <Card.Img variant="top" src={img} />
           <h6 className="title">{title}</h6>
         </Link>

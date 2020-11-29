@@ -13,7 +13,7 @@ import LogoutIcon from '../../../assets/icons/logout_red.svg'
 import { useContext } from 'react'
 import { AppContext } from '../../../context/appContext'
 
-const Header = ({ isAddVideo }) => {
+const Header = ({ isAddVideo, onChange }) => {
   const [state, dispatch] = useContext(AppContext)
 
   const handleLogout = () => {
@@ -24,7 +24,7 @@ const Header = ({ isAddVideo }) => {
   return (
     <div className="header fixed-top">
       <div className="search">
-        <Input placeholder="Search ..." height={40} />
+        <Input placeholder="Search ..." height={40} onChange={onChange} />
       </div>
       <div className="user">
         <Link to="/add-video" className="link-add-video">

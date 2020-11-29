@@ -11,6 +11,7 @@ import DetailVideoPage from './DetailVideoPage'
 import ContentCreatorPage from './ContentCreatorPage'
 import AddVideo from './AddVideoPage'
 import EditChannel from './EditChannel'
+import notFound from './404'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             />
             <PrivateRoute exact path="/add-video" component={AddVideo} />
             <PrivateRoute exact path="/edit-channel" component={EditChannel} />
+            <Route component={notFound} />
           </Switch>
         </Router>
       </AppContextProvider>

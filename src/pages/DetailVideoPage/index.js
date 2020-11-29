@@ -4,7 +4,6 @@ import User from '../../assets/images/user2.png'
 import viewIcon from '../../assets/icons/view.svg'
 import dateIcon from '../../assets/icons/refresh.svg'
 import TextArea from '../../components/atoms/TextArea'
-import Videos from '../../components/molecules/Videos'
 import './DetailVideo.css'
 import Button from '../../components/atoms/Button'
 import Comments from '../../components/atoms/Comments'
@@ -12,18 +11,18 @@ import CommentsText from '../../assets/Dummy/Comments'
 import MainComponent from '../../components/molecules/MainComponent'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import Thumbnail from '../../components/molecules/Thumbnail'
 
 const DetailVideoPage = () => {
   const [video, setVideo] = useState('')
   let { id } = useParams()
-  console.log(id)
-  console.log(video)
 
   useEffect(() => {
-    const videoById = DummyHomepage.find((video) => video._id == id)
+    const videoById = DummyHomepage.find((video) => video.id == id)
     console.log(videoById)
     setVideo(videoById)
   }, [])
+
   return (
     <div className="home">
       <MainComponent />
@@ -59,7 +58,23 @@ const DetailVideoPage = () => {
           </div>
           <div className="recomendation">
             <h4>RECOMENDATION</h4>
-            <Videos isRecomendation />
+            <div className="videos">
+              <div className="thumbnail recomendation">
+                {DummyHomepage.map((item) => (
+                  <div className="thumbnail-wrapper">
+                    <Thumbnail
+                      key={item.id}
+                      id={item.id}
+                      img={item.image}
+                      title={item.title}
+                      channel={item.channel}
+                      views={item.views}
+                      date={item.date}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

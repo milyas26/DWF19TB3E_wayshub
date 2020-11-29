@@ -39,3 +39,24 @@ body {
   margin-left: 360px;
 }
 /* End Home Page */
+
+.videos .thumbnail .thumbnail-wrapper {
+  width: 25%;
+}
+
+.videos .thumbnail.recomendation .thumbnail-wrapper {
+  width: 100%;
+}
+.videos h2 {
+  color: #fff;
+  font-weight: 24px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #d2d2d2;
+  margin-top: 45px;
+}
+
+.videos .thumbnail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
