@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import MainComponent from '../../components/molecules/MainComponent'
-import DummyHompage from '../../assets/Dummy/Homepage'
+import DummyVideos from '../../assets/Dummy/ListVideos'
 import Thumbnail from '../../components/molecules/Thumbnail'
 const Home = () => {
   let [search, setSearch] = useState()
@@ -11,7 +11,7 @@ const Home = () => {
     setSearch((search = keyword))
   }
 
-  const items = DummyHompage.filter((item) => {
+  const items = DummyVideos.filter((item) => {
     if (search == null) {
       return item
     } else if (item.title.toLowerCase().includes(search.toLowerCase())) {

@@ -1,5 +1,5 @@
 import ReactPlayer from 'react-player'
-import DummyHomepage from '../../assets/Dummy/Homepage'
+import DummyVideos from '../../assets/Dummy/ListVideos'
 import User from '../../assets/images/user2.png'
 import viewIcon from '../../assets/icons/view.svg'
 import dateIcon from '../../assets/icons/refresh.svg'
@@ -18,7 +18,7 @@ const DetailVideoPage = () => {
   let { id } = useParams()
 
   useEffect(() => {
-    const videoById = DummyHomepage.find((video) => video.id == id)
+    const videoById = DummyVideos.find((video) => video.id == id)
     console.log(videoById)
     setVideo(videoById)
   }, [])
@@ -60,7 +60,7 @@ const DetailVideoPage = () => {
             <h4>RECOMENDATION</h4>
             <div className="videos">
               <div className="thumbnail recomendation">
-                {DummyHomepage.map((item) => (
+                {DummyVideos.map((item) => (
                   <div className="thumbnail-wrapper">
                     <Thumbnail
                       key={item.id}
