@@ -1,4 +1,3 @@
-import User from '../../../assets/images/user2.png'
 import './Profile.css'
 import { Link } from 'react-router-dom'
 

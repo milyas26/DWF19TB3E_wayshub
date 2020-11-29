@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import BackgroundImage from '../../assets/images/background-youtube.png'
 import MainComponent from '../../components/molecules/MainComponent'
 import Channel from '../../assets/Dummy/Channel'

@@ -1,6 +1,5 @@
 import MainComponent from '../../components/molecules/MainComponent'
 import DummySubscribed from '../../assets/Dummy/Subscribed'
-import DummyHompage from '../../assets/Dummy/Homepage'
 import Thumbnail from '../../components/molecules/Thumbnail'
 import { useState } from 'react'
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import BackgroundImage from '../../assets/images/background-youtube.png'
 import User from '../../assets/images/user2.png'

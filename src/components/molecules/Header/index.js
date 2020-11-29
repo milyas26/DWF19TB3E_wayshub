@@ -1,4 +1,3 @@
-import React from 'react'
 import Input from '../../atoms/Input'
 import User from '../../../assets/images/user2.png'
 import addVideoLight from '../../../assets/icons/add_video_white.svg'

@@ -5,7 +5,7 @@ import Thumbnail4 from '../images/thumbnail21.png'
 
 const MyVideos = [
   {
-    id: '11',
+    id: '1',
     title: 'Go Outside and Make Aeropress Coffee',
     channel: 'BBQ Montain Boys',
     image: Thumbnail1,
@@ -14,7 +14,7 @@ const MyVideos = [
     date: '04 Sep 2020',
   },
   {
-    id: '12',
+    id: '2',
     title: 'Dirumah menanam episode 1 : Tauge',
     channel: 'BBQ Montain Boys',
     image: Thumbnail2,
@@ -23,7 +23,7 @@ const MyVideos = [
     date: '01 Apr 2018',
   },
   {
-    id: '13',
+    id: '3',
     title: 'Go Outside and Make French Coffee',
     channel: 'BBQ Montain Boys',
     image: Thumbnail3,
@@ -32,7 +32,7 @@ const MyVideos = [
     date: '28 Aug 2020',
   },
   {
-    id: '14',
+    id: '4',
     title: 'BBQ Montain Boys Episode 5 : A Day in The Life of Farmer',
     channel: 'BBQ Montain Boys',
     image: Thumbnail4,

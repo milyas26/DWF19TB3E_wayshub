@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-// import './Landing.css'
+import { useState } from 'react'
 import Greeting from '../../assets/images/greeting.png'
 import Gap from '../../components/atoms/Gap'
 import Button from '../../components/atoms/Button'

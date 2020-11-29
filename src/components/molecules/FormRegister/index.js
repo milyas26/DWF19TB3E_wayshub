@@ -1,4 +1,3 @@
-import React from 'react'
 import Input from '../../atoms/Input'
 import Gap from '../../atoms/Gap'
 import Button from '../../atoms/Button'

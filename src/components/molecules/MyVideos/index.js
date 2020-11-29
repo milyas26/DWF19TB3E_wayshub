@@ -1,4 +1,3 @@
-import React from 'react'
 import Thumbnail from '../Thumbnail'
 import MyVideosDummy from '../../../assets/Dummy/MyVideos'
 

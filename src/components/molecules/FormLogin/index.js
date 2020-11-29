@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import Button from '../../atoms/Button'
 import Gap from '../../atoms/Gap'
 import Input from '../../atoms/Input'

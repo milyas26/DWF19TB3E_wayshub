@@ -1,8 +1,8 @@
-import React from 'react'
+import { useRef } from 'react'
 import './InputFile.css'
 
 const InputFile = ({ label, icon, handleFile }) => {
-  const hiddenFileInput = React.useRef(null)
+  const hiddenFileInput = useRef(null)
   const handleClick = (e) => {
     hiddenFileInput.current.click()
   }
