@@ -4,6 +4,7 @@ import homeInActive from '../../../assets/icons/home_white.svg'
 import subscriptionIconInActive from '../../../assets/icons/subscription_white.svg'
 import subscriptionIconActive from '../../../assets/icons/subscription_orange.svg'
 import SidebarMenu from '../../atoms/SidebarMenu'
+import './Sidebar.css'
 
 // Channel Images
 import Channels from '../../../assets/Dummy/Channel'
@@ -32,7 +33,9 @@ const SideBar = ({ isHome, isSubscribed }) => {
       {Channels.map((item) => (
         <Channel item={item} key={item.id} />
       ))}
-      <h4 className="show-more">Show More</h4>
+      <Link to="/channels" className="link-sidebar">
+        <h4 className="show-more">Show More</h4>
+      </Link>
     </div>
   )
 }
