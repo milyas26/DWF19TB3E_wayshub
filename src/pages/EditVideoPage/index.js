@@ -21,6 +21,7 @@ const EditVideo = () => {
   let { id } = useParams()
   const history = useHistory()
   const [thisVideo, setThisVideo] = useState([])
+  const [isUploading, setIsUploading] = useState(false)
 
   const fetchVideo = async (e) => {
     try {
@@ -60,8 +61,9 @@ const EditVideo = () => {
     }
 
     try {
-      const response = await API.patch(`/video/${id}`, body, config)
-
+      setIsUploading(true)
+      const response = await API.put(`/video/${id}`, body, config)
+      setIsUploading(false)
       history.push('/my-channel')
     } catch (err) {
       console.log(err)
@@ -136,7 +138,12 @@ const EditVideo = () => {
             />
           </div>
           <Gap height={20} />
-          <Button title="Edit" onClick={handleSubmit} />
+          <Button
+            title="Edit"
+            onClick={handleSubmit}
+            isLoading={isUploading ? true : false}
+            isDisabled={isUploading ? true : false}
+          />
           <Gap height={10} />
           <Button
             secondary

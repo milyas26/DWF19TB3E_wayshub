@@ -12,7 +12,8 @@ const Channel = ({ item, onClick }) => {
 
   const handleClick = () => {
     history.push(`/content-creator/${item && item.id}`)
-    onClick()
+    window.location.reload()
+    // onClick()
   }
 
   return (

@@ -216,7 +216,7 @@ const DetailVideoPage = () => {
                     <div className="thumbnail-wrapper" key={item.id}>
                       <Thumbnail
                         id={item.id}
-                        img={`http://localhost:5000/${item.thumbnail}`}
+                        img={item.thumbnail}
                         title={item.title}
                         channel={item.channel.channelName}
                         idChannel={item.channel.id}

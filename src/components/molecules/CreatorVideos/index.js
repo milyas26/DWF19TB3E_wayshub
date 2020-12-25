@@ -31,7 +31,7 @@ const MyVideos = ({ user }) => {
           <div className="thumbnail-wrapper" key={item.id}>
             <Thumbnail
               id={item.id}
-              img={`http://localhost:5000/${item.thumbnail}`}
+              img={item.thumbnail}
               title={item.title}
               comments={item.comments?.length}
               views={item.viewcount}

@@ -122,7 +122,7 @@ const ContentCreator = () => {
         <div className="container-page">
           <div className="content-creator">
             <div className="image-wrapper">
-              <img src={`http://localhost:5000/${creator.thumbnail}`} alt="" />
+              <img src={creator.thumbnail} alt="" />
             </div>
 
             <div className="link-profile">
