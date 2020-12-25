@@ -22,6 +22,7 @@ const FormLogin = () => {
     password: '',
   })
   const [invalidMessage, setInvalidMessage] = useState('')
+  const [isLogin, setIsLogin] = useState(false)
 
   const { email, password } = formData
 
@@ -34,6 +35,7 @@ const FormLogin = () => {
     e.preventDefault()
 
     try {
+      setIsLogin(true)
       const body = JSON.stringify({ email, password })
 
       const config = {
@@ -47,9 +49,9 @@ const FormLogin = () => {
         type: 'LOGIN',
         payload: response.data.data.channel,
       })
-      
-      setAuthToken(response.data.data.channel.token)
 
+      setAuthToken(response.data.data.channel.token)
+      setIsLogin(false)
       history.push('/home')
     } catch (err) {
       console.log(err)
@@ -91,7 +93,12 @@ const FormLogin = () => {
           </Link>
         </div>
         <Gap height={30} />
-        <Button title="Sign In" onClick={handleLogin} />
+        <Button
+          title="Sign In"
+          onClick={handleLogin}
+          isLoading={isLogin ? true : false}
+          isDisabled={isLogin ? true : false}
+        />
       </form>
     </div>
   )

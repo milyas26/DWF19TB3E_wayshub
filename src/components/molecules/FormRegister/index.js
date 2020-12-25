@@ -23,6 +23,7 @@ const FormRegister = (props) => {
     channelName: '',
     description: '',
   })
+  const [isRegister, setIsRegister] = useState(false)
 
   const { email, password, channelName, description } = formData
 
@@ -35,6 +36,7 @@ const FormRegister = (props) => {
     e.preventDefault()
 
     try {
+      setIsRegister(true)
       const body = JSON.stringify({ email, password, channelName, description })
 
       const config = {
@@ -50,7 +52,7 @@ const FormRegister = (props) => {
       })
 
       setAuthToken(response.data.data.channel.token)
-
+      setIsRegister(false)
       history.push('/home')
     } catch (err) {
       console.log(err)
@@ -100,7 +102,12 @@ const FormRegister = (props) => {
           value={description}
         />
         <Gap height={30} />
-        <Button title="Sign Up" onClick={handleRegister} />
+        <Button
+          title="Sign Up"
+          onClick={handleRegister}
+          isLoading={isRegister ? true : false}
+          isDisabled={isRegister ? true : false}
+        />
       </form>
     </div>
   )
