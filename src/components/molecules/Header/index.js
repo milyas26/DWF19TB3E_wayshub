@@ -70,11 +70,31 @@ const Header = ({ isAddVideo, onChange }) => {
 
             <Dropdown.Menu>
               <Dropdown.Item as={Link} to="/my-channel">
-                <img src={UserIcon} alt="my channel" />
-                <span>My Channel</span>
+                <div className="icon">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div className="label">
+                  <span>My Channel</span>
+                </div>
               </Dropdown.Item>
+
+              <Dropdown.Item as={Link} to="/watch-later">
+                <div className="icon">
+                  <i class="fas fa-list"></i>
+                </div>
+                <div className="label">
+                  <span>Watch Later</span>
+                </div>
+              </Dropdown.Item>
+
               <Dropdown.Item as={Link} to={'/home'} onClick={handleLogout}>
-                <img src={LogoutIcon} alt="my channel" />
+                <i
+                  class="fas fa-sign-out-alt"
+                  style={{
+                    color: 'red',
+                    fontWeight: '600',
+                  }}
+                ></i>
                 <span
                   style={{
                     color: 'red',

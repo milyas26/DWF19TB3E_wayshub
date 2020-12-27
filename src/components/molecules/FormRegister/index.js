@@ -57,6 +57,7 @@ const FormRegister = (props) => {
     } catch (err) {
       console.log(err)
       setInvalidMessage(err.response.data.error.message)
+      setIsRegister(false)
     }
   }
 

@@ -56,6 +56,7 @@ const FormLogin = () => {
     } catch (err) {
       console.log(err)
       setInvalidMessage(err.response.data.error.message)
+      setIsLogin(false)
     }
   }
 

@@ -58,7 +58,6 @@
   color: #fff;
   z-index: 999;
   right: 0;
-  bottom: 8px;
 }
 .thumbnail .option .elipsis {
   bottom: -10px;
@@ -128,7 +127,7 @@
 }
 
 .thumbnail .confirm-delete .button-confirm button {
-  background-color: #ff7a00;
+  background-color: #fce5d0;
   font-size: 12px;
   font-weight: 600;
   border: none;
@@ -145,4 +144,8 @@
   background-color: #000;
   border: 1px solid #ff7a00;
   color: #fff;
+}
+
+.thumbnail .watch-later-icon:hover {
+  color: #ff7a00;
 }

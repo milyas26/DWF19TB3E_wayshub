@@ -10,7 +10,7 @@ import commentIcon from '../../../assets/icons/speech-bubble.png'
 
 // CSS
 import './Thumbnail.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { API } from '../../../config/api'
 
 const Thumbnail = ({
@@ -25,6 +25,29 @@ const Thumbnail = ({
   onClickDeleteVideo,
 }) => {
   const history = useHistory()
+  const [isInList, setIsInList] = useState(true)
+  const [loading, setLoading] = useState(true)
+
+  const fetchVideos = async () => {
+    try {
+      setLoading(true)
+      const response = await API(`/check-list/${id}`)
+
+      if (response.data.data.isInList === null) {
+        setIsInList(false)
+      }
+
+      setLoading(false)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  useEffect(() => {
+    fetchVideos()
+  }, [])
+
+  console.log(isInList)
 
   const handleClick = () => {
     history.push(`/detail-video/${id}`)
@@ -61,6 +84,32 @@ const Thumbnail = ({
     history.push(`/edit-video/${id}`)
   }
 
+  // ADD TO WATCHLATER
+  const addWatchLater = async () => {
+    try {
+      const channel = await API.post(`/add-watchlater/${id}`)
+      setIsInList(true)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  // DELETE LIST
+  const deleteList = async () => {
+    try {
+      const response = await API.delete(`/delete-watchlater/${id}`)
+
+      setLoading(true)
+      const check = await API(`/check-list/${id}`)
+
+      setIsInList(false)
+
+      setLoading(false)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   return (
     <div className="thumbnail">
       <Card style={{ width: 227, backgroundColor: '#000' }}>
@@ -88,25 +137,36 @@ const Thumbnail = ({
             <img src={dateIcon} alt="Date" />
             <span>{myDate}</span>
           </div>
-        </div>
 
-        {idChannel == localStorage.id && (
-          <div className="option" onClick={handleDropDown}>
-            <i className="fas fa-ellipsis-v elipsis"></i>
-            <div
-              className="dropdown"
-              style={{ display: isShown ? 'flex' : 'none' }}
-            >
-              <span className="delete" onClick={handleShowConfirm}>
-                <i className="fas fa-trash-alt" style={{ marginRight: 5 }}></i>{' '}
-                Delete
-              </span>
-              <span onClick={editVideo}>
-                <i className="fas fa-pencil-alt"></i> Edit
-              </span>
+          {idChannel == localStorage.id ? (
+            <div className="option" onClick={handleDropDown}>
+              <i className="fas fa-ellipsis-v elipsis"></i>
+              <div
+                className="dropdown"
+                style={{ display: isShown ? 'flex' : 'none' }}
+              >
+                <span className="delete" onClick={handleShowConfirm}>
+                  <i
+                    className="fas fa-trash-alt"
+                    style={{ marginRight: 5 }}
+                  ></i>{' '}
+                  Delete
+                </span>
+                <span onClick={editVideo}>
+                  <i className="fas fa-pencil-alt"></i> Edit
+                </span>
+              </div>
             </div>
-          </div>
-        )}
+          ) : (
+            <div
+              className="watch-later-icon"
+              onClick={isInList ? deleteList : addWatchLater}
+              style={{ color: isInList === true && '#ff7a00' }}
+            >
+              <i className="fas fa-list"></i>
+            </div>
+          )}
+        </div>
       </Card>
 
       <div className="card-wrapper">

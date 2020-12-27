@@ -14,6 +14,7 @@ import AddVideo from './AddVideoPage'
 import EditChannel from './EditChannel'
 import notFound from './404'
 import ChannelsPage from './ChannelsPage'
+import WatchLaterPage from './WatchLaterPage'
 import EditVideoPage from './EditVideoPage'
 import ForgotPassword from './ForgotPasswordPage'
 import { API, setAuthToken } from '../config/api'
@@ -63,6 +64,7 @@ function App() {
             component={EditVideoPage}
           />
           <PrivateRoute exact path="/edit-channel" component={EditChannel} />
+          <PrivateRoute exact path="/watch-later" component={WatchLaterPage} />
           <Route exact path="/channels" component={ChannelsPage} />
           <Route exact path="/reset-password" component={ForgotPassword} />
           <Route component={notFound} />
